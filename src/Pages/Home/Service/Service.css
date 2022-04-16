@@ -1,0 +1,24 @@
+.service-container img {
+  height: 150px;
+}
+.service-container {
+  width: 260px;
+}
+.checkout-button {
+  background-color: orange;
+  border: none;
+  border-radius: 8px;
+  font-size: 19px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+.full-container {
+  height: 300px;
+  text-align: center;
+}
+.full-container:hover {
+  box-shadow: -2px 3px 27px 4px rgba(128, 128, 128, 0.86);
+  -webkit-box-shadow: -2px 3px 27px 4px rgba(128, 128, 128, 0.86);
+  -moz-box-shadow: -2px 3px 27px 4px rgba(128, 128, 128, 0.86);
+  border-radius: 10px;
+}

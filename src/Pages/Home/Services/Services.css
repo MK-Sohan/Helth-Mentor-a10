@@ -1,0 +1,25 @@
+.service-title {
+  font-family: "Raleway", sans-serif;
+  color: orange;
+  text-align: center;
+  margin-top: 200px;
+  font-size: 80px;
+}
+
+.service-describe {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 180px;
+  grid-column-gap: 170px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin-bottom: 300px;
+}
