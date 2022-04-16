@@ -15,7 +15,9 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>A Fresh Approch to Healthy Life</h3>
+            <h3>
+              Hi I am MK.Sohan <br /> Your Personal Helth Advisor
+            </h3>
             <p>Unlock Your Potential With Good Nutrition</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -28,7 +30,10 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>A Fresh Approch to Healthy Life</h3>
+            <h3>
+              {" "}
+              Hi I am MK.Sohan <br /> Your Personal Helth Advisor
+            </h3>
             <p>Unlock Your Potential With Good Nutrition.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -41,7 +46,10 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>A Fresh Approch to Healthy Life</h3>
+            <h3>
+              {" "}
+              Hi I am MK.Sohan <br /> Your Personal Helth Advisor
+            </h3>
             <p>Unlock Your Potential With Good Nutrition.</p>
           </Carousel.Caption>
         </Carousel.Item>

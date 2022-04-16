@@ -10,14 +10,14 @@
       "id": "625b0d0d9c7b3755c3430a50",
       "rating": "",
       "image": "./services/mindgames.jpeg",
-      "name": "MIND GAMES",
+      "name": "IMPROVE MIND GAMES",
       "description": "It is crucial to understand how to prevent others from playing such games with you."
     },
     {
       "id": "625b0d0d06b07a8bf2c6ffa4",
       "rating": "",
       "image": "./services/depration.png",
-      "name": "DEPRESSION",
+      "name": "HELP TO CUT DEPRESSION",
       "description": "If your depression is keeping you from living your life don’t hesitate to seek help."
     },
     {
@@ -45,7 +45,7 @@
       "id": "625b0d0d8dd84fde15cf83b2",
       "rating": "",
       "image": "./services/mentalhelth.png",
-      "name": "MENTAL HEALTH",
+      "name": "IMPROVE MENTAL HEALTH",
       "description": "Improve your focus, relieve stress and anxiety, and develop creativity."
     },
     {
