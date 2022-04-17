@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div className="footer-container"></div>
-        <div className="copyright">
+        <div className=" bottom copyright">
           <div>Copyright © 2022 .All rights reserved by Md.Mahbubul Kobir</div>
         </div>
       </footer>

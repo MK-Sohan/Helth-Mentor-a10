@@ -35,3 +35,31 @@
   font-family: "Raleway", sans-serif;
   font-size: 22px;
 }
+@media only screen and (max-width: 644px) {
+  .why-choosing-us img {
+    height: 60px;
+    margin-left: 130px;
+  }
+  .service-title {
+    font-family: "Raleway", sans-serif;
+    color: orange;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 60px;
+  }
+  .services {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .why-choosing-us img {
+    height: 60px;
+  }
+}

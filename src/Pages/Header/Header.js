@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
@@ -30,10 +30,12 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link as={Link} to="/login" eventKey={2} href="#memes">
               Log in
             </Nav.Link>
-            <Nav.Link href="#deets">Register</Nav.Link>
+            <Nav.Link as={Link} to="/register" href="#deets">
+              Register
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

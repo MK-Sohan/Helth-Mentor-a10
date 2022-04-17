@@ -15,18 +15,14 @@ footer.copyright {
   color: var(--pure);
   text-align: center;
   font-size: 0.75rem;
-  height: 50px;
 }
-footer.copyright a {
+/* footer.copyright a {
   color: var(--primary);
   text-decoration: none;
-}
-.follow-us a {
-  text-decoration: none;
-  color: white;
-}
+} */
+
 .copyright {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   text-align: center;
   padding: 1rem 0;
   background: var(--secondary);
@@ -34,4 +30,16 @@ footer.copyright a {
   text-align: center;
   font-size: 20px;
   height: 80px;
+}
+@media only screen and (max-width: 644px) {
+  .copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--secondary);
+    color: var(--pure);
+    text-align: center;
+    font-size: 20px;
+    height: 80px;
+    width: 100%;
+  }
 }
