@@ -1,0 +1,63 @@
+.terms {
+  display: flex;
+  align-items: center;
+}
+.terms p {
+  margin-left: 10px;
+  margin-top: 14px;
+}
+
+.main-container {
+  height: 900px;
+  width: 700px;
+  margin: 100px auto;
+  background-color: rgb(236, 233, 233);
+}
+.login-inputs input {
+  border-radius: 5px;
+  height: 60px;
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 100px;
+  padding: 0px 15px;
+  border: 1px solid gray;
+}
+.signin-button {
+  width: 500px;
+  margin-left: 100px;
+  margin-top: 30px;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+}
+.signin-button:hover {
+  background-color: orange;
+  color: black;
+}
+.design {
+  margin-left: 40px;
+  margin-top: 60px;
+}
+.login-tittle a {
+  text-decoration: none;
+}
+
+.signinwithgoogle-button {
+  width: 300px;
+  margin-left: 200px;
+  margin-top: 30px;
+  height: 55px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(83, 208, 83);
+  color: white;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+}
+.signinwithgoogle-button:hover {
+  background-color: rgb(4, 192, 4);
+}
