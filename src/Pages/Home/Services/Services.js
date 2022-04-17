@@ -10,9 +10,10 @@ const Services = () => {
       <div className="service-header">
         <h1 className="service-title">My All Services</h1>
         <p className="service-describe">
-          Fight against oppression amplify assistance; countries medicine new
-          approaches The Elders Global South advocate organization <br /> equal
-          opportunity of vaccine international vulnerable citizens
+          Now a days lots of peoples are suffering different kind of mental
+          diseases. But they don't know how to cout it off from their life.{" "}
+          <br /> As a personal helth trainer I will help you how to come out
+          from this type of mental issuses.
         </p>
       </div>
       <div className="main">
