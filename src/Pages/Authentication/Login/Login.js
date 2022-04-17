@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {
@@ -10,8 +10,9 @@ import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 import Loading from "../../Share/Loading/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import google from "../../../images/google.png";
+
 const Login = () => {
-  //   const [customerror, setCustomerror] = useState("");
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   const [signInWithGoogle, googleuser, googleloading, googleerror] =
     useSignInWithGoogle(auth);
@@ -76,7 +77,7 @@ const Login = () => {
               ref={emailref}
               type="email"
               name="email"
-              id=""
+              id="loginemail"
               required
               placeholder="Enter Your Email"
             />{" "}
@@ -86,7 +87,7 @@ const Login = () => {
               required
               type="password"
               name="password"
-              id=""
+              id="loginpass"
               placeholder="Enter Your Password"
             />{" "}
             <br />
@@ -117,6 +118,7 @@ const Login = () => {
         onClick={handlesigninwithGoogle}
         className="signinwithgoogle-button"
       >
+        <img src={google} alt="" />
         Sign in With google
       </button>
       <ToastContainer />

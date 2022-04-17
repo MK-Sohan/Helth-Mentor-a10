@@ -24,10 +24,9 @@ const Service = ({ service }) => {
           <h6>{name}</h6>
         </div>
         <div className="detail">{description} </div>
-
-        <buttonon onClick={gotocheckout} className="checkout-button">
+        <button onClick={gotocheckout} className="checkout-button">
           <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Checkout
-        </buttonon>
+        </button>
       </div>
     </div>
   );

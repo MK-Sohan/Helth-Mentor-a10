@@ -13,6 +13,3 @@ DETAILS ABOUT MY WEBSITE:
 <li>In blog page there is some question and answer</li>
 <li>In Checkout page there is a form about how you can make an appointment about the services</li>
 <li>In bottom I add a footer section</li>
-<li></li>
-<li></li>
-<li></li>

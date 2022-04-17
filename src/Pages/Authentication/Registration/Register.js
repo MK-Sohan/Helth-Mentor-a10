@@ -4,7 +4,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../../Share/Loading/Loading";
-
+import google from "../../../images/google.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
@@ -75,7 +75,7 @@ const Register = () => {
               type="email"
               name="email"
               required
-              id=""
+              id="regemail"
               placeholder="Enter Your Email"
             />{" "}
             <br />
@@ -84,7 +84,7 @@ const Register = () => {
               type="password"
               name="password"
               required
-              id=""
+              id="regpass"
               placeholder="Enter Your Password"
             />{" "}
             <br />
@@ -115,6 +115,7 @@ const Register = () => {
         onClick={handlesigninwithGoogle}
         className="signinwithgoogle-button"
       >
+        <img src={google} alt="" />
         Sign in With google
       </button>
       <ToastContainer />
