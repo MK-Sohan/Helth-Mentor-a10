@@ -5,6 +5,8 @@
   width: 260px;
 }
 .checkout-button {
+  padding: 6px;
+  cursor: pointer;
   background-color: orange;
   border: none;
   border-radius: 8px;

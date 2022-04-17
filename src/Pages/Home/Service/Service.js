@@ -1,7 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Serviceshooks from "../../../Hooks/Serviceshooks";
 import "./Service.css";
+
+import { faCheck, faCoffee } from "@fortawesome/free-solid-svg-icons";
+
 const Service = ({ service }) => {
   const { name, image, id, description } = service;
   //   console.log(service);
@@ -21,9 +25,9 @@ const Service = ({ service }) => {
         </div>
         <div className="detail">{description} </div>
 
-        <button onClick={gotocheckout} className="checkout-button">
-          Checkout
-        </button>
+        <buttonon onClick={gotocheckout} className="checkout-button">
+          <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> Checkout
+        </buttonon>
       </div>
     </div>
   );
