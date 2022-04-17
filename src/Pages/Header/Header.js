@@ -13,7 +13,7 @@ const Header = () => {
     signOut(auth);
   };
   if (loading) {
-    <Loading></Loading>;
+    return <Loading></Loading>;
   }
   return (
     <Navbar

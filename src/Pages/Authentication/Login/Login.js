@@ -1,13 +1,19 @@
 import React, { useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 import Loading from "../../Share/Loading/Loading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
-  const [sendPasswordResetEmail, sending, resetpasserror] =
-    useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  const [signInWithGoogle, googleuser, googleloading, googleerror] =
+    useSignInWithGoogle(auth);
   const emailref = useRef("");
   const passwordref = useRef("");
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -19,17 +25,33 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
   };
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   if (loading || sending) {
-    <Loading></Loading>;
+    return <Loading></Loading>;
   }
-  if (user) {
-    navigate("/");
+  if (user || googleuser) {
+    navigate(from, { replace: true });
+  }
+  let errorelement;
+  if (error) {
+    errorelement = (
+      <div>
+        <p className="text-danger text-center mt-4">Error: {error?.message}</p>
+      </div>
+    );
   }
 
   const resetpassword = async () => {
     const email = emailref.current.value;
     await sendPasswordResetEmail(email);
-    alert("Sent email");
+    toast("Sent email");
+  };
+
+  const handlesigninwithGoogle = (e) => {
+    e.preventDefault();
+    signInWithGoogle();
   };
   return (
     <div className="main-container">
@@ -61,6 +83,7 @@ const Login = () => {
               placeholder="Enter Your Password"
             />{" "}
             <br />
+            {errorelement}
             <button className="signin-button">Sign in</button>
             <Link to="/login" onClick={resetpassword}>
               <p className="text-center mt-5">Forget Password?</p>
@@ -83,7 +106,13 @@ const Login = () => {
           </div>
         </div>
       </form>
-      <button className="signinwithgoogle-button">Sign in With google</button>
+      <button
+        onClick={handlesigninwithGoogle}
+        className="signinwithgoogle-button"
+      >
+        Sign in With google
+      </button>
+      <ToastContainer />
     </div>
   );
 };

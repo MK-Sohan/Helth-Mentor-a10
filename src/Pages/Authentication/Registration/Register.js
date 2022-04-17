@@ -1,17 +1,43 @@
 import React, { useRef } from "react";
 import "./Register.css";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
+} from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../../Share/Loading/Loading";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+
 const Register = () => {
   const nameref = useRef("");
   const emailref = useRef("");
   const passwordref = useRef("");
+  const [signinwithgoogle, googleuser, googleloading, googleerror] =
+    useSignInWithGoogle(auth);
+
+  useSendEmailVerification(auth, { sendEmailVerification: true });
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
-  if (user) {
+  if (user || googleuser) {
     navigate("/");
+    errorelement = "";
+  }
+  if (loading || googleloading) {
+    return <Loading></Loading>;
+  }
+
+  let errorelement;
+  if (error || googleerror) {
+    errorelement = (
+      <div>
+        <p className="text-danger text-center mt-4">Error: {error?.message}</p>
+      </div>
+    );
   }
 
   const handleFormsubmit = (e) => {
@@ -21,6 +47,12 @@ const Register = () => {
     const password = passwordref.current.value;
     // console.log(email, password, name);
     createUserWithEmailAndPassword(email, password);
+    toast("email send");
+  };
+
+  const handlesigninwithGoogle = (e) => {
+    e.preventDefault();
+    signinwithgoogle();
   };
   return (
     <div className="main-container">
@@ -57,7 +89,10 @@ const Register = () => {
               placeholder="Enter Your Password"
             />{" "}
             <br />
-            <p>{error}</p>
+            {errorelement}
+            <p className="text-center mt-4">
+              Already Have an Account? <Link to="/login"> Log in</Link>
+            </p>
             <button className="register-button">Register</button>
             <div className="design">
               <div className="d-flex  align-items-center">
@@ -77,7 +112,13 @@ const Register = () => {
           </div>
         </div>
       </form>
-      <button className="signinwithgoogle-button">Sign in With google</button>
+      <button
+        onClick={handlesigninwithGoogle}
+        className="signinwithgoogle-button"
+      >
+        Sign in With google
+      </button>
+      <ToastContainer />
     </div>
   );
 };
