@@ -10,6 +10,7 @@ import Checkout from "./Pages/Checkout/Checkout";
 import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Registration/Register";
 import Requireauth from "./Pages/Requireauth/Requireauth";
+import Four0four from "./Pages/404/Four0four";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="*" element={<Four0four></Four0four>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
