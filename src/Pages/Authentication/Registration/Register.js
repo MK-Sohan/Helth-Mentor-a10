@@ -1,9 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Register.css";
-import {
-  useCreateUserWithEmailAndPassword,
-  useSendEmailVerification,
-} from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../../Share/Loading/Loading";
@@ -13,20 +10,21 @@ import "react-toastify/dist/ReactToastify.css";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 const Register = () => {
+  //   const [customerror, setCustomerror] = useState("");
   const nameref = useRef("");
   const emailref = useRef("");
   const passwordref = useRef("");
   const [signinwithgoogle, googleuser, googleloading, googleerror] =
     useSignInWithGoogle(auth);
 
-  useSendEmailVerification(auth, { sendEmailVerification: true });
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
   if (user || googleuser) {
     navigate("/");
     errorelement = "";
   }
+
   if (loading || googleloading) {
     return <Loading></Loading>;
   }
@@ -45,6 +43,7 @@ const Register = () => {
     const name = nameref.current.value;
     const email = emailref.current.value;
     const password = passwordref.current.value;
+
     // console.log(email, password, name);
     createUserWithEmailAndPassword(email, password);
     toast("email send");

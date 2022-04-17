@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {
@@ -11,6 +11,7 @@ import Loading from "../../Share/Loading/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
+  //   const [customerror, setCustomerror] = useState("");
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   const [signInWithGoogle, googleuser, googleloading, googleerror] =
     useSignInWithGoogle(auth);
@@ -22,20 +23,21 @@ const Login = () => {
   const handleloginForm = (e) => {
     const email = emailref.current.value;
     const password = passwordref.current.value;
+
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
   };
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  if (loading || sending) {
+  if (loading || sending || googleloading) {
     return <Loading></Loading>;
   }
   if (user || googleuser) {
     navigate(from, { replace: true });
   }
   let errorelement;
-  if (error) {
+  if (error || googleerror) {
     errorelement = (
       <div>
         <p className="text-danger text-center mt-4">Error: {error?.message}</p>
@@ -46,7 +48,12 @@ const Login = () => {
   const resetpassword = async () => {
     const email = emailref.current.value;
     await sendPasswordResetEmail(email);
-    toast("Sent email");
+    if (!email) {
+      toast("Enter an Email first");
+    } else {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    }
   };
 
   const handlesigninwithGoogle = (e) => {
