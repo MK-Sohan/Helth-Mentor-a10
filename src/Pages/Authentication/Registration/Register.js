@@ -31,6 +31,7 @@ const Register = () => {
           </div>
           <div className="login-inputs">
             <input
+              required
               ref={nameref}
               type="name"
               name="name"
@@ -42,6 +43,7 @@ const Register = () => {
               ref={emailref}
               type="email"
               name="email"
+              required
               id=""
               placeholder="Enter Your Email"
             />{" "}
@@ -50,6 +52,7 @@ const Register = () => {
               ref={passwordref}
               type="password"
               name="password"
+              required
               id=""
               placeholder="Enter Your Password"
             />{" "}

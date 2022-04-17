@@ -9,6 +9,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Checkout from "./Pages/Checkout/Checkout";
 import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Registration/Register";
+import Requireauth from "./Pages/Requireauth/Requireauth";
 
 function App() {
   return (
@@ -18,7 +19,14 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        <Route path="/checkout" element={<Checkout></Checkout>}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <Requireauth>
+              <Checkout></Checkout>
+            </Requireauth>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
       </Routes>
