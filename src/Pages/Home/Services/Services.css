@@ -23,3 +23,15 @@
   margin-top: 90px;
   margin-bottom: 300px;
 }
+.why-choosing-us img {
+  height: 60px;
+  margin-left: 900px;
+}
+.why-choosing-us h1 {
+  font-family: "Raleway", sans-serif;
+  color: royalblue;
+}
+.why-choosing-us p {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+}

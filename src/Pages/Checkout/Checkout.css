@@ -1,0 +1,44 @@
+.checkout-container {
+  height: 600px;
+  margin: 30px auto;
+  width: 50%;
+  background-color: rgb(243, 241, 237);
+  display: flex;
+  justify-content: center;
+}
+.input-1 input {
+  width: 290px;
+  height: 50px;
+  border: none;
+  margin-right: 40px;
+  padding: 10px;
+}
+
+.input-2 input {
+  width: 620px;
+  height: 50px;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+.checkout-title {
+  margin: 60px 0px;
+}
+
+.submit-button {
+  border: none;
+  width: 200px;
+  height: 60px;
+  background-color: rgb(65, 170, 65);
+  color: white;
+  border-radius: 50px;
+}
+.submit-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(65, 170, 65);
+  border: 1px solid rgb(65, 170, 65);
+}
+.checkout-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
