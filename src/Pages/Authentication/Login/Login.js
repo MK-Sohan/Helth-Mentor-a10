@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {
@@ -31,12 +31,12 @@ const Login = () => {
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  if (loading || sending || googleloading) {
-    return <Loading></Loading>;
-  }
-  if (user || googleuser) {
-    navigate(from, { replace: true });
-  }
+  useEffect(() => {
+    if (user || googleuser) {
+      navigate(from, { replace: true });
+    }
+  }, [user, googleuser]);
+
   let errorelement;
   if (error) {
     errorelement = (
@@ -61,6 +61,9 @@ const Login = () => {
     e.preventDefault();
     signInWithGoogle();
   };
+  if (loading || sending || googleloading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="main-container">
       <form onSubmit={handleloginForm}>

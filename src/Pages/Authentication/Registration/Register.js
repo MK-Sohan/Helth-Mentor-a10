@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 const Register = () => {
-  //   const [customerror, setCustomerror] = useState("");
   const nameref = useRef("");
   const emailref = useRef("");
   const passwordref = useRef("");
@@ -20,14 +19,12 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
-  if (user || googleuser) {
-    navigate("/");
-    errorelement = "";
-  }
-
-  if (loading || googleloading) {
-    return <Loading></Loading>;
-  }
+  useEffect(() => {
+    if (user || googleuser) {
+      navigate("/");
+      errorelement = "";
+    }
+  }, [user, googleuser]);
 
   let errorelement;
   if (error) {
@@ -53,6 +50,10 @@ const Register = () => {
     e.preventDefault();
     signinwithgoogle();
   };
+  if (loading || googleloading) {
+    return <Loading></Loading>;
+  }
+
   return (
     <div className="main-container">
       <form onSubmit={handleFormsubmit}>

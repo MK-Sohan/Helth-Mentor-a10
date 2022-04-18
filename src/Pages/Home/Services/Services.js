@@ -7,7 +7,7 @@ import "./Services.css";
 const Services = () => {
   const [services, setServices] = Serviceshooks();
   return (
-    <div>
+    <div id="services">
       <div className="why-choosing-us">
         <h1 className="text-center mt-5">Why Choosing Health Coach</h1> <br />
         <img src={image} alt="" />
@@ -19,9 +19,7 @@ const Services = () => {
         </p>
       </div>
       <div className="service-header">
-        <h1 id="services" className="service-title">
-          What I Provide
-        </h1>
+        <h1 className="service-title">What I Provide</h1>
         <p className="service-describe">
           Now a days lots of peoples are suffering different kind of mental
           diseases. But they don't know how to cout it off from their life.{" "}
