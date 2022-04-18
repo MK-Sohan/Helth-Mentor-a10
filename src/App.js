@@ -18,7 +18,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/services" element={<Services></Services>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/checkout"
@@ -28,14 +28,7 @@ function App() {
             </Requireauth>
           }
         ></Route>
-        <Route
-          path="/checkout/:serviceid"
-          element={
-            <Requireauth>
-              <Checkout></Checkout>
-            </Requireauth>
-          }
-        ></Route>
+
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<Four0four></Four0four>}></Route>

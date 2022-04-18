@@ -1,4 +1,17 @@
 .blog-container {
-  height: 850px;
-  margin-left: 100px;
+  height: 1000px;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 50%;
+}
+@media only screen and (max-width: 644px) {
+  .blog-container {
+    height: 1300px;
+
+    margin-top: 50px;
+    width: 270px;
+  }
+  .blog-container h1 {
+    font-size: 20px;
+  }
 }

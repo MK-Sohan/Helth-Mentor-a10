@@ -19,7 +19,9 @@ const Services = () => {
         </p>
       </div>
       <div className="service-header">
-        <h1 className="service-title">My All Services</h1>
+        <h1 id="services" className="service-title">
+          What I Provide
+        </h1>
         <p className="service-describe">
           Now a days lots of peoples are suffering different kind of mental
           diseases. But they don't know how to cout it off from their life.{" "}
