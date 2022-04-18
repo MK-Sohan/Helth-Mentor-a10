@@ -6,7 +6,7 @@ import banner3 from "../../../banner/holding-frouit.jpg";
 const Banner = () => {
   return (
     <div>
-      <Carousel className="mt-5">
+      <Carousel className="mt-2">
         <Carousel.Item>
           <img
             style={{ height: "850px" }}

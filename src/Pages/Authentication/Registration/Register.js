@@ -41,7 +41,6 @@ const Register = () => {
     const email = emailref.current.value;
     const password = passwordref.current.value;
 
-    // console.log(email, password, name);
     createUserWithEmailAndPassword(email, password);
     toast("email send");
   };
