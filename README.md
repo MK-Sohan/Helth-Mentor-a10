@@ -1,7 +1,9 @@
+HELTH MENTOR <br/>
+
 LIVE WEBSITE LINK: https://assignment-10-b5a0b.firebaseapp.com <br />
 DETAILS ABOUT MY WEBSITE:
 
-<li>I give my website name Helth Mentis,because it is a helth related website</li>
+<li>I give my website name HELTH MENTOR,because it is a helth related website</li>
 <li>In Top there is a header to help the consumer experience the website easyly</li>
 <li> In Home Component there is a carousel and the Service section</li>
 <li>In Carousel I add helth related 3 different kind of photos </li>

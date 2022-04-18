@@ -1,0 +1,40 @@
+.about-container {
+  height: 900px;
+}
+.formal-image img {
+  height: 300px;
+}
+.name {
+  text-align: center;
+}
+
+.formal-image {
+  margin-left: 810px;
+}
+.about-container p {
+  width: 600px;
+}
+.goal {
+  margin-left: 600px;
+}
+@media only screen and (max-width: 644px) {
+  .formal-image img {
+    height: 250px;
+  }
+  .formal-image {
+    display: flex;
+    justify-content: center;
+  }
+  .about-container p {
+    width: 200px;
+  }
+  .formal-image {
+    margin-left: 30px;
+  }
+  .goal {
+    margin-left: 20px;
+  }
+  .name {
+    font-size: 15px;
+  }
+}

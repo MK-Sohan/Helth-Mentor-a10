@@ -40,7 +40,7 @@ const Register = () => {
     const name = nameref.current.value;
     const email = emailref.current.value;
     const password = passwordref.current.value;
-
+    console.log(name, email, password);
     createUserWithEmailAndPassword(email, password);
     toast("email send");
   };

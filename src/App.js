@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Pages/Header/Header";
 import { Route, Routes } from "react-router-dom";
@@ -11,6 +10,8 @@ import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Registration/Register";
 import Requireauth from "./Pages/Requireauth/Requireauth";
 import Four0four from "./Pages/404/Four0four";
+import About from "./Pages/About/About";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
         <Route
           path="/checkout"
           element={
@@ -35,6 +37,7 @@ function App() {
         <Route path="*" element={<Four0four></Four0four>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }

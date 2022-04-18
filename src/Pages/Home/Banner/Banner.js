@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import banner1 from "../../../banner/yoga1.jpg";
-import banner2 from "../../../banner/forest-1.jpg";
+import banner1 from "../../../banner/doc-3 .jpg";
+import banner2 from "../../../banner/yoga1.jpg";
 import banner3 from "../../../banner/holding-frouit.jpg";
 const Banner = () => {
   return (
@@ -9,7 +9,7 @@ const Banner = () => {
       <Carousel className="mt-2">
         <Carousel.Item>
           <img
-            style={{ height: "850px" }}
+            style={{ height: "890px" }}
             className="d-block w-100"
             src={banner1}
             alt="First slide"
@@ -23,7 +23,7 @@ const Banner = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{ height: "850px" }}
+            style={{ height: "890px" }}
             className="d-block w-100 "
             src={banner2}
             alt="Second slide"
@@ -39,7 +39,7 @@ const Banner = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{ height: "850px" }}
+            style={{ height: "890px" }}
             className="d-block w-100"
             src={banner3}
             alt="Third slide"

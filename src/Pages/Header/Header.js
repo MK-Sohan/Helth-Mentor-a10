@@ -25,7 +25,7 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
-          Helth Mentis
+          HELTH MENTOR
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -38,6 +38,9 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/blogs">
               Blogs
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about">
+              About
             </Nav.Link>
           </Nav>
           <Nav>
