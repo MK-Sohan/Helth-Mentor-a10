@@ -17,5 +17,6 @@ DETAILS ABOUT MY WEBSITE:
 <li>I also add register page where the consumer can create an account and experience the website</li>
 <li>In blog page there is some question and answer</li>
 <li>In Checkout page there is a form about how you can make an appointment about the services</li>
+<li>In about page I give my image and some discription about my goal</li>
 <li>In bottom I add a footer section</li>
 <li>I also add a 404 page.</li>
