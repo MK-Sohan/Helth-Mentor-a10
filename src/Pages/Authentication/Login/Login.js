@@ -38,7 +38,7 @@ const Login = () => {
     navigate(from, { replace: true });
   }
   let errorelement;
-  if (error || googleerror) {
+  if (error) {
     errorelement = (
       <div>
         <p className="text-danger text-center mt-4">Error: {error?.message}</p>

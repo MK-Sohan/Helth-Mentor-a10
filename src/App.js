@@ -28,6 +28,14 @@ function App() {
             </Requireauth>
           }
         ></Route>
+        <Route
+          path="/checkout/:serviceid"
+          element={
+            <Requireauth>
+              <Checkout></Checkout>
+            </Requireauth>
+          }
+        ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<Four0four></Four0four>}></Route>
